@@ -7,7 +7,7 @@ import java.util.UUID;
  * Created by chadley on 10/14/2015.
  */
 public class Chore {
-    private UUID mUUID;
+    private UUID mId;
     private String mDescription;
     private String mTitle;
     private float mBounty;
@@ -15,15 +15,26 @@ public class Chore {
     private Boolean mCompleted;
     private Date mDateCompleted;
     private Boolean mBountyPaid;
+
+    public Chore() {
+        mId = UUID.randomUUID();
+    }
+    public Chore(String description, String title, float bounty) {
+        mId = UUID.randomUUID();
+        mDescription = description;
+        mTitle = title;
+        mBounty = bounty;
+    }
+
     private UUID mCompletedBy;
     private UUID mGroupAssigned;
 
-    public UUID getUUID() {
-        return mUUID;
+    public UUID getId() {
+        return mId;
     }
 
-    public void setUUID(UUID UUID) {
-        mUUID = UUID;
+    public void setId(UUID id) {
+        mId = id;
     }
 
     public String getDescription() {
@@ -58,7 +69,7 @@ public class Chore {
         mDateCreated = dateCreated;
     }
 
-    public Boolean getCompleted() {
+    public Boolean isCompleted() {
         return mCompleted;
     }
 
