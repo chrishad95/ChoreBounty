@@ -1,4 +1,4 @@
-package com.taylorbest.chorebounty.models;
+package com.taylorbest.chorereward.models;
 
 import java.util.Date;
 import java.util.UUID;

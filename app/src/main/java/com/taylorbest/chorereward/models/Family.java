@@ -1,15 +1,15 @@
-package com.taylorbest.chorebounty.models;
+package com.taylorbest.chorereward.models;
 
 import java.util.UUID;
 
 /**
  * Created by chadley on 10/14/2015.
  */
-public class Group {
-    private UUID mId;
+public class Family {
+    UUID mId;
     private String mTitle;
 
-    public Group(String title) {
+    public Family(String title) {
         mTitle = title;
     }
 

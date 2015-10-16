@@ -1,4 +1,4 @@
-package com.taylorbest.chorebounty;
+package com.taylorbest.chorereward;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

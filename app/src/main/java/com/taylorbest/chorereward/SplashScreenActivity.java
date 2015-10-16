@@ -1,9 +1,8 @@
-package com.taylorbest.chorebounty;
+package com.taylorbest.chorereward;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 /**
  * Created by chadley on 10/14/2015.

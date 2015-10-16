@@ -1,8 +1,8 @@
-package com.taylorbest.chorebounty;
+package com.taylorbest.chorereward;
 
 import android.content.Context;
 
-import com.taylorbest.chorebounty.models.Chore;
+import com.taylorbest.chorereward.models.Chore;
 
 import java.util.ArrayList;
 import java.util.Date;

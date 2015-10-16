@@ -1,4 +1,4 @@
-package com.taylorbest.chorebounty;
+package com.taylorbest.chorereward;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.taylorbest.chorebounty.models.Chore;
+import com.taylorbest.chorereward.models.Chore;
 
 import java.text.DateFormat;
 import java.util.ArrayList;

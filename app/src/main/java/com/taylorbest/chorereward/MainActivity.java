@@ -1,4 +1,4 @@
-package com.taylorbest.chorebounty;
+package com.taylorbest.chorereward;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
