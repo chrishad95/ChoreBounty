@@ -10,20 +10,20 @@ public class Chore {
     private UUID mId;
     private String mDescription;
     private String mTitle;
-    private float mBounty;
+    private float mReward;
     private Date mDateCreated;
     private Boolean mCompleted;
     private Date mDateCompleted;
-    private Boolean mBountyPaid;
+    private Boolean mRewardPaid;
 
     public Chore() {
         mId = UUID.randomUUID();
     }
-    public Chore(String description, String title, float bounty) {
+    public Chore(String description, String title, float reward) {
         mId = UUID.randomUUID();
         mDescription = description;
         mTitle = title;
-        mBounty = bounty;
+        mReward = reward;
     }
 
     private UUID mCompletedBy;
@@ -53,12 +53,12 @@ public class Chore {
         mTitle = title;
     }
 
-    public float getBounty() {
-        return mBounty;
+    public float getReward() {
+        return mReward;
     }
 
-    public void setBounty(float bounty) {
-        mBounty = bounty;
+    public void setReward(float reward) {
+        mReward = reward;
     }
 
     public Date getDateCreated() {
@@ -85,12 +85,12 @@ public class Chore {
         mDateCompleted = dateCompleted;
     }
 
-    public Boolean getBountyPaid() {
-        return mBountyPaid;
+    public Boolean isRewardPaid() {
+        return mRewardPaid;
     }
 
-    public void setBountyPaid(Boolean bountyPaid) {
-        mBountyPaid = bountyPaid;
+    public void setRewardPaid(Boolean rewardPaid) {
+        mRewardPaid = rewardPaid;
     }
 
     public UUID getCompletedBy() {

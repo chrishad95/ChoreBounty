@@ -43,12 +43,15 @@
             <TextView android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:textColor="#372c24"
-                      android:text="Email"/>
+                      android:text="Email"
+                />
             <EditText android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
                       android:layout_marginTop="5dip"
                       android:layout_marginBottom="20dip"
-                      android:singleLine="true"/>
+                      android:singleLine="true"
+                      android:id="@+id/login_email_text"
+                />
             <!--  Password Label -->
             <TextView android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
@@ -58,7 +61,8 @@
                       android:layout_height="wrap_content"
                       android:layout_marginTop="5dip"
                       android:singleLine="true"
-                      android:password="true"/>
+                      android:password="true"
+                      android:id="@+id/login_password_text"/>
             <!-- Login button -->
             <Button android:id="@+id/btnLogin"
                     android:layout_width="fill_parent"
@@ -71,7 +75,7 @@
                       android:layout_height="wrap_content"
                       android:layout_marginTop="40dip"
                       android:layout_marginBottom="40dip"
-                      android:text="New to Twitter? Register here"
+                      android:text="New to Chore Reward? Register here"
                       android:gravity="center"
                       android:textSize="20dip"
                       android:textColor="#0b84aa"/>
