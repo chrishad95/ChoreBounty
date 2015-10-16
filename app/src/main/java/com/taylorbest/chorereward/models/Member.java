@@ -6,15 +6,15 @@ import java.util.UUID;
  * Created by chadley on 10/14/2015.
  */
 public class Member {
-    private UUID id;
+    private int id;
     private String mName;
 
-    public Member(String name) {
-        this.id = UUID.randomUUID();
+    public Member(String name, int id) {
+        this.id = id;
         mName = name;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 

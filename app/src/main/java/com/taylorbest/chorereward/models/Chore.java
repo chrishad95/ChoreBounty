@@ -7,7 +7,7 @@ import java.util.UUID;
  * Created by chadley on 10/14/2015.
  */
 public class Chore {
-    private UUID mId;
+    private int mId;
     private String mDescription;
     private String mTitle;
     private float mReward;
@@ -16,24 +16,27 @@ public class Chore {
     private Date mDateCompleted;
     private Boolean mRewardPaid;
 
-    public Chore() {
-        mId = UUID.randomUUID();
+    public Chore () {
+
     }
-    public Chore(String description, String title, float reward) {
-        mId = UUID.randomUUID();
+    public Chore(int id) {
+        this.mId = id;
+    }
+    public Chore(int id, String description, String title, float reward) {
+        this.mId = id;
         mDescription = description;
         mTitle = title;
         mReward = reward;
     }
 
-    private UUID mCompletedBy;
-    private UUID mGroupAssigned;
+    private int mCompletedBy;
+    private int mGroupAssigned;
 
-    public UUID getId() {
+    public int getId() {
         return mId;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         mId = id;
     }
 
@@ -93,19 +96,19 @@ public class Chore {
         mRewardPaid = rewardPaid;
     }
 
-    public UUID getCompletedBy() {
+    public int getCompletedBy() {
         return mCompletedBy;
     }
 
-    public void setCompletedBy(UUID completedBy) {
+    public void setCompletedBy(int completedBy) {
         mCompletedBy = completedBy;
     }
 
-    public UUID getGroupAssigned() {
+    public int getGroupAssigned() {
         return mGroupAssigned;
     }
 
-    public void setGroupAssigned(UUID groupAssigned) {
+    public void setGroupAssigned(int groupAssigned) {
         mGroupAssigned = groupAssigned;
     }
 }

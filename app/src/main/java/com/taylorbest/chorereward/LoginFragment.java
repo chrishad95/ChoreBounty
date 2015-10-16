@@ -49,7 +49,7 @@ public class LoginFragment extends Fragment {
                     params.put("uid", loginEmailEditText.getText().toString());
                     params.put("pwd", loginPasswordEditText.getText().toString());
 
-                    new AsyncRequest((OnAsyncRequestComplete) getActivity(), params, "do_login", "http://www.taylorbest.com/budget/model/mobile/accounts.php").execute();
+                    new AsyncRequest((OnAsyncRequestComplete) getActivity(), params, "do_login", "http://www.taylorbest.com/budget/model/mobile/auth.php").execute();
 
                 }
 

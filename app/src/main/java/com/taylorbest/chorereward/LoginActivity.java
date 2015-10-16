@@ -1,8 +1,10 @@
 package com.taylorbest.chorereward;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
+import com.taylorbest.chorereward.models.Security;
 import com.taylorbest.chorereward.utils.Consts;
 import com.taylorbest.chorereward.utils.OnAsyncRequestComplete;
 
@@ -28,18 +30,32 @@ public class LoginActivity extends SingleFragmentActivity implements OnAsyncRequ
                 String identity = "";
 
 
-                //JSONObject jsonObject = new JSONObject(response);
-                JSONArray jsonArray = new JSONArray(response);
-
 
                 Log.d(Consts.TAG, response);
 
+                JSONObject jsonObject = new JSONObject(response);
+                if (jsonObject.has("security_key") && jsonObject.has("user_key") ) {
+                    Security.setSecurityKey(jsonObject.getString("security_key"));
+                    Security.setAuthKey(jsonObject.getString("user_key"));
 
-
-                for (int i=0; i< jsonArray.length(); i++){
-                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-
+                    Intent intent = new Intent(LoginActivity.this, ChoreListActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
+
+
+                //JSONArray jsonArray = new JSONArray(response);
+//                for (int i=0; i< jsonArray.length(); i++){
+//                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+//                    if (jsonObject.has("security_key")) {
+//                        Security.setSecurityKey(jsonObject.getString("security_key"));
+//                        Security.setAuthKey(jsonObject.getString("auth_key"));
+//
+//                        Intent intent = new Intent(LoginActivity.this, ChoreListActivity.class);
+//                        startActivity(intent);
+//                        finish();
+//                    }
+//                }
 
 
 //                FragmentManager fm = getSupportFragmentManager();

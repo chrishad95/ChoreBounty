@@ -101,7 +101,7 @@ public class AsyncRequest extends AsyncTask<Void, Integer, String>{
 
             }
         }
-        Log.d(Consts.TAG, "Result in asynctask: " + res);
+        Log.d(Consts.TAG, "Result in AsyncRequest: " + res);
         return res;
     }
 

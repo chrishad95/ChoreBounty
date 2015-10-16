@@ -6,14 +6,16 @@ import java.util.UUID;
  * Created by chadley on 10/14/2015.
  */
 public class Group {
-    private UUID mId;
+    private int mId;
     private String mTitle;
+    private String mDescription;
+
 
     public Group(String title) {
         mTitle = title;
     }
 
-    public UUID getId() {
+    public int getId() {
         return mId;
     }
 
@@ -23,5 +25,13 @@ public class Group {
 
     public void setTitle(String title) {
         mTitle = title;
+    }
+
+    public String getDescription() {
+        return mDescription;
+    }
+
+    public void setDescription(String description) {
+        mDescription = description;
     }
 }

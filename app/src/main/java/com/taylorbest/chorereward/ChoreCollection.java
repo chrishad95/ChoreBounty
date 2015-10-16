@@ -18,9 +18,6 @@ public class ChoreCollection {
 
     private ChoreCollection(Context appContext) {
 
-
-
-        // this is a comment
         mAppContext = appContext;
         mChores = new ArrayList<Chore>();
         for (int i=0; i<10; i++) {
