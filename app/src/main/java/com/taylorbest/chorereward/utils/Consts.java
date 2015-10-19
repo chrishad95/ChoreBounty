@@ -13,6 +13,9 @@ public final class Consts {
     public static final String PERIOD = ".";
     public static final String DOUBLE_QUOTE = "\"";
 
+    public static final String PREFS_NAME = "CHOREREWARDS_PREFS";
+
+
     // PRIVATE //
 
     /**

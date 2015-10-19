@@ -38,9 +38,9 @@ public class ChoreCollection {
 
     public ArrayList<Chore> getChores() { return mChores; }
 
-    public Chore getChore(UUID id) {
+    public Chore getChore(int id) {
         for (Chore c : mChores) {
-            if (c.getId().equals(id)){
+            if (c.getId()== id){
                 return c;
             }
         }

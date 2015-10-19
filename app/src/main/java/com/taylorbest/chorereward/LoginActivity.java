@@ -1,6 +1,7 @@
 package com.taylorbest.chorereward;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
@@ -8,7 +9,6 @@ import com.taylorbest.chorereward.models.Security;
 import com.taylorbest.chorereward.utils.Consts;
 import com.taylorbest.chorereward.utils.OnAsyncRequestComplete;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -36,31 +36,20 @@ public class LoginActivity extends SingleFragmentActivity implements OnAsyncRequ
                 JSONObject jsonObject = new JSONObject(response);
                 if (jsonObject.has("security_key") && jsonObject.has("user_key") ) {
                     Security.setSecurityKey(jsonObject.getString("security_key"));
-                    Security.setAuthKey(jsonObject.getString("user_key"));
+                    Security.setUserKey(jsonObject.getString("user_key"));
 
-                    Intent intent = new Intent(LoginActivity.this, ChoreListActivity.class);
+                    SharedPreferences sp = getBaseContext().getSharedPreferences(Consts.PREFS_NAME, getBaseContext().MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("security_key", jsonObject.getString("security_key"));
+                    editor.putString("user_key", jsonObject.getString("user_key"));
+                    editor.commit();
+
+                    Intent intent = new Intent(LoginActivity.this, CircleListActivity.class);
                     startActivity(intent);
                     finish();
                 }
 
 
-                //JSONArray jsonArray = new JSONArray(response);
-//                for (int i=0; i< jsonArray.length(); i++){
-//                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-//                    if (jsonObject.has("security_key")) {
-//                        Security.setSecurityKey(jsonObject.getString("security_key"));
-//                        Security.setAuthKey(jsonObject.getString("auth_key"));
-//
-//                        Intent intent = new Intent(LoginActivity.this, ChoreListActivity.class);
-//                        startActivity(intent);
-//                        finish();
-//                    }
-//                }
-
-
-//                FragmentManager fm = getSupportFragmentManager();
-//                AccountsFragment fragment = (AccountsFragment) fm.findFragmentById(R.id.container);
-//                fragment.updateAccountList(accountList);
             } catch (Exception e) {
                 Log.d(Consts.TAG, e.toString());
             }

@@ -5,7 +5,7 @@ package com.taylorbest.chorereward.models;
  */
 public class Security {
     private static String securityKey;
-    private static String authKey;
+    private static String userKey;
 
     public static String getSecurityKey() {
         return securityKey;
@@ -15,11 +15,11 @@ public class Security {
         Security.securityKey = securityKey;
     }
 
-    public static String getAuthKey() {
-        return authKey;
+    public static String getUserKey() {
+        return userKey;
     }
 
-    public static void setAuthKey(String authKey) {
-        Security.authKey = authKey;
+    public static void setUserKey(String userKey) {
+        Security.userKey = userKey;
     }
 }

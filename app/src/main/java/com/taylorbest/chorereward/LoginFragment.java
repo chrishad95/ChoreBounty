@@ -1,5 +1,6 @@
 package com.taylorbest.chorereward;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -48,6 +49,7 @@ public class LoginFragment extends Fragment {
                     HashMap<String, String> params = new HashMap<String, String>();
                     params.put("uid", loginEmailEditText.getText().toString());
                     params.put("pwd", loginPasswordEditText.getText().toString());
+                    params.put("user_key", Build.SERIAL.toString());
 
                     new AsyncRequest((OnAsyncRequestComplete) getActivity(), params, "do_login", "http://www.taylorbest.com/budget/model/mobile/auth.php").execute();
 
